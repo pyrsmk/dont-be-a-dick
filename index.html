@@ -45,10 +45,9 @@
     padding: 3rem 2.5rem 6rem;
   }
 
-  /* MASTHEAD */
   .masthead {
     border-top: 4px solid var(--ink);
-    border-bottom: 1px solid var(--ink);
+    border-bottom: 4px solid var(--ink);
     padding: 0.6rem 0 0.5rem;
     margin-bottom: 0.3rem;
     display: flex;
@@ -72,15 +71,11 @@
     letter-spacing: 0.05em;
   }
 
-  .rule-thick { border: none; border-top: 3px solid var(--ink); margin: 0 0 0.15rem; }
-  .rule-thin  { border: none; border-top: 1px solid var(--ink); margin: 0 0 1.5rem; }
-
-  /* HEADLINE */
   .headline-wrap {
     text-align: center;
-    padding: 2.5rem 1rem 2rem;
+    padding: 4rem 1rem;
     border-bottom: 1px solid var(--ink);
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     position: relative;
   }
 
@@ -121,7 +116,6 @@
     margin-top: 0.5rem;
   }
 
-  /* COLUMNS */
   .columns {
     display: grid;
     grid-template-columns: 1fr 1px 1fr 1px 1fr;
@@ -134,12 +128,9 @@
     opacity: 0.2;
   }
 
-  /* PULLQUOTE — full width break */
   .pullquote-wrap {
-    border-top: 3px solid var(--ink);
-    border-bottom: 3px solid var(--ink);
     padding: 1.5rem 2rem;
-    margin: 2.5rem 0;
+    margin: 4rem 0;
     text-align: center;
     position: relative;
   }
@@ -153,7 +144,6 @@
     color: var(--ink);
   }
 
-  /* ARTICLE SECTIONS */
   .section { margin-bottom: 0 }
 
   .section-label {
@@ -184,7 +174,6 @@
 
   p:last-child { margin-bottom: 0; }
 
-  /* DROPCAP */
   .dropcap::first-letter {
     font-family: 'Playfair Display', serif;
     font-size: 3.8rem;
@@ -195,7 +184,6 @@
     color: var(--ink);
   }
 
-  /* FOOTER */
   .footer {
     border-top: 3px solid var(--ink);
     margin-top: 3rem;
@@ -215,15 +203,16 @@
     margin: 0;
   }
 
-  /* BOTTOM LINE — special treatment */
   .bottom-line-wrap {
     background: var(--ink);
     color: var(--paper);
     padding: 2rem 2.5rem;
-    margin-top: 2.5rem;
+    margin: 4rem 0;
   }
 
-  .bottom-line-wrap .section-label { color: #aaa; }
+  .bottom-line-wrap .section-label {
+    color: #aaa;
+  }
 
   .bottom-line-wrap h2 {
     color: var(--paper);
@@ -235,20 +224,25 @@
     font-size: 0.92rem;
   }
 
-  /* SINGLE COLUMN SECTION */
   .single-col {
     max-width: 620px;
     margin: 0 auto 2.5rem;
   }
 
   @media (max-width: 640px) {
-    .page { padding: 1.5rem 1.25rem 4rem; }
+    .page {
+      padding: 1.5rem 1.25rem 4rem;
+    }
     .columns {
       grid-template-columns: 1fr;
       gap: 2rem 0;
     }
-    .col-divider { display: none; }
-    h1 { font-size: 3rem; }
+    .col-divider {
+      display: none;
+    }
+    h1 {
+      font-size: 3rem;
+    }
   }
 </style>
 </head>
@@ -260,8 +254,6 @@
     <span class="masthead-left">Open Source · Ethics · Common Decency</span>
     <span class="masthead-right">Version 1.0 &nbsp;·&nbsp; Free to copy, free to use</span>
   </div>
-  <hr class="rule-thick">
-  <hr class="rule-thin">
 
   <div class="headline-wrap">
     <span class="kicker">A software license for reasonable human beings</span>
@@ -271,7 +263,7 @@
 
   <div class="single-col">
     <p class="dropcap">Do whatever you want with this code. Modify it, distribute it, build on top of it — for personal or commercial projects. Make it into something completely different. Never mention the original author. All of that is fine.</p>
-    <p>What you cannot do is use it to cause harm. Harm to a person, a group, a company, a community, a government. <strong>This code is not a weapon.</strong></p>
+    <p>What you cannot do is use it to cause harm. Harm to a person, a group, a company, a community, a government, animals, insects, or even the planet. <strong>This code, or part of it, must not be used as a weapon.</strong></p>
   </div>
 
   <div class="pullquote-wrap">
