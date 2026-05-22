@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Don't Be A Dick License</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IM+Fell+English:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1a18;
+    --ink-soft: #3a3a36;
+    --ink-muted: #6a6a62;
+    --paper: #f5f0e8;
+    --paper-dark: #ede7d5;
+    --rule: #1a1a18;
+  }
+
+  html { background: var(--paper); }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Libre Baskerville', Georgia, serif;
+    min-height: 100vh;
+    padding: 0;
+  }
+
+  .noise {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 100;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 3rem 2.5rem 6rem;
+  }
+
+  /* MASTHEAD */
+  .masthead {
+    border-top: 4px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding: 0.6rem 0 0.5rem;
+    margin-bottom: 0.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+  }
+
+  .masthead-left {
+    font-family: 'IM Fell English', Georgia, serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+  }
+
+  .masthead-right {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.65rem;
+    color: var(--ink-muted);
+    letter-spacing: 0.05em;
+  }
+
+  .rule-thick { border: none; border-top: 3px solid var(--ink); margin: 0 0 0.15rem; }
+  .rule-thin  { border: none; border-top: 1px solid var(--ink); margin: 0 0 1.5rem; }
+
+  /* HEADLINE */
+  .headline-wrap {
+    text-align: center;
+    padding: 2.5rem 1rem 2rem;
+    border-bottom: 1px solid var(--ink);
+    margin-bottom: 2rem;
+    position: relative;
+  }
+
+  .kicker {
+    font-family: 'IM Fell English', Georgia, serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(3.2rem, 8vw, 6.5rem);
+    font-weight: 900;
+    line-height: 0.92;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 1.2rem;
+  }
+
+  h1 em {
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .version-tag {
+    display: inline-block;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    border: 1px solid var(--ink-muted);
+    padding: 0.2rem 0.6rem;
+    margin-top: 0.5rem;
+  }
+
+  /* COLUMNS */
+  .columns {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr 1px 1fr;
+    gap: 0 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .col-divider {
+    background: var(--ink);
+    opacity: 0.2;
+  }
+
+  /* PULLQUOTE — full width break */
+  .pullquote-wrap {
+    border-top: 3px solid var(--ink);
+    border-bottom: 3px solid var(--ink);
+    padding: 1.5rem 2rem;
+    margin: 2.5rem 0;
+    text-align: center;
+    position: relative;
+  }
+
+  .pullquote {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.3;
+    color: var(--ink);
+  }
+
+  /* ARTICLE SECTIONS */
+  .section { margin-bottom: 0 }
+
+  .section-label {
+    font-family: 'IM Fell English', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.8rem;
+    color: var(--ink);
+  }
+
+  p {
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: var(--ink-soft);
+    margin-bottom: 0.8rem;
+  }
+
+  p:last-child { margin-bottom: 0; }
+
+  /* DROPCAP */
+  .dropcap::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.8rem;
+    font-weight: 900;
+    float: left;
+    line-height: 0.8;
+    margin: 0.05em 0.08em 0 0;
+    color: var(--ink);
+  }
+
+  /* FOOTER */
+  .footer {
+    border-top: 3px solid var(--ink);
+    margin-top: 3rem;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .footer p {
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin: 0;
+  }
+
+  /* BOTTOM LINE — special treatment */
+  .bottom-line-wrap {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 2rem 2.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .bottom-line-wrap .section-label { color: #aaa; }
+
+  .bottom-line-wrap h2 {
+    color: var(--paper);
+    font-size: 1.4rem;
+  }
+
+  .bottom-line-wrap p {
+    color: #c8c3b5;
+    font-size: 0.92rem;
+  }
+
+  /* SINGLE COLUMN SECTION */
+  .single-col {
+    max-width: 620px;
+    margin: 0 auto 2.5rem;
+  }
+
+  @media (max-width: 640px) {
+    .page { padding: 1.5rem 1.25rem 4rem; }
+    .columns {
+      grid-template-columns: 1fr;
+      gap: 2rem 0;
+    }
+    .col-divider { display: none; }
+    h1 { font-size: 3rem; }
+  }
+</style>
+</head>
+<body>
+<div class="noise"></div>
+<main class="page">
+
+  <div class="masthead">
+    <span class="masthead-left">Open Source · Ethics · Common Decency</span>
+    <span class="masthead-right">Version 1.0 &nbsp;·&nbsp; Free to copy, free to use</span>
+  </div>
+  <hr class="rule-thick">
+  <hr class="rule-thin">
+
+  <div class="headline-wrap">
+    <span class="kicker">A software license for reasonable human beings</span>
+    <h1>Don't Be<br><em>A Dick</em></h1>
+    <div class="version-tag">DBAD License · v1.0</div>
+  </div>
+
+  <div class="single-col">
+    <p class="dropcap">Do whatever you want with this code. Modify it, distribute it, build on top of it — for personal or commercial projects. Make it into something completely different. Never mention the original author. All of that is fine.</p>
+    <p>What you cannot do is use it to cause harm. Harm to a person, a group, a company, a community, a government. <strong>This code is not a weapon.</strong></p>
+  </div>
+
+  <div class="pullquote-wrap">
+    <p class="pullquote">"If you're wondering whether<br>what you're doing is okay —<br>it probably isn't."</p>
+  </div>
+
+  <div class="columns">
+    <div class="section">
+      <span class="section-label">What's allowed</span>
+      <h2>Use it. Break it. Build something new.</h2>
+      <p>The code is yours to use, fork, remix, and integrate. Personal projects, commercial products, open source derivatives — all welcome.</p>
+      <p>Using it as a building block for something of your own is exactly what it's here for.</p>
+    </div>
+
+    <div class="col-divider"></div>
+
+    <div class="section">
+      <span class="section-label">What isn't</span>
+      <h2>Don't sell the box. Don't point it at people.</h2>
+      <p>Wrapping it in a box and calling it a product is being a dick. If your business model is reselling this code unchanged, find another model.</p>
+      <p>And harm is harm — whether it targets a single person or an entire state. That's where this license draws its only real line.</p>
+    </div>
+
+    <div class="col-divider"></div>
+
+    <div class="section">
+      <span class="section-label">Legal standing</span>
+      <h2>None. And that's the point.</h2>
+      <p>This license will never hold up in court. It's not meant to. The real judge is public opinion, and on the internet, things move fast.</p>
+      <p>This is a moral contract, not a legal one. It says something about who you are when you use it.</p>
+    </div>
+  </div>
+
+  <div class="bottom-line-wrap">
+    <span class="section-label">Bottom line</span>
+    <h2>Common sense and basic decency are enough.</h2>
+    <p>This license doesn't need fine print. The name says it all. If you have to ask, you already know the answer.</p>
+  </div>
+
+  <footer class="footer">
+    <p>Don't Be A Dick License (DBAD) · v1.0</p>
+    <p>No rights reserved · Copy freely · Be decent</p>
+  </footer>
+
+</main>
+</body>
+</html>
