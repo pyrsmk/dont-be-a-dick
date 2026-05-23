@@ -116,21 +116,14 @@
     margin-top: 0.5rem;
   }
 
-  .columns {
-    display: grid;
-    grid-template-columns: 1fr 1px 1fr 1px 1fr;
-    gap: 0 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .col-divider {
-    background: var(--ink);
-    opacity: 0.2;
+  .single-col {
+    max-width: 620px;
+    margin: 0 auto 4rem;
   }
 
   .pullquote-wrap {
-    padding: 1.5rem 2rem;
-    margin: 4rem 0;
+    padding: 0 2rem;
+    margin-bottom: 6rem;
     text-align: center;
     position: relative;
   }
@@ -144,11 +137,25 @@
     color: var(--ink);
   }
 
-  .section { margin-bottom: 0 }
+  .columns {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr 1px 1fr;
+    gap: 0 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .col-divider {
+    background: var(--ink);
+    opacity: 0.2;
+  }
+
+  .section {
+    margin-bottom: 0;
+  }
 
   .section-label {
     font-family: 'IM Fell English', serif;
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--ink-muted);
@@ -172,7 +179,9 @@
     margin-bottom: 0.8rem;
   }
 
-  p:last-child { margin-bottom: 0; }
+  p:last-child {
+    margin-bottom: 0;
+  }
 
   .dropcap::first-letter {
     font-family: 'Playfair Display', serif;
@@ -203,32 +212,6 @@
     margin: 0;
   }
 
-  .bottom-line-wrap {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 2rem 2.5rem;
-    margin: 4rem 0;
-  }
-
-  .bottom-line-wrap .section-label {
-    color: #aaa;
-  }
-
-  .bottom-line-wrap h2 {
-    color: var(--paper);
-    font-size: 1.4rem;
-  }
-
-  .bottom-line-wrap p {
-    color: #c8c3b5;
-    font-size: 0.92rem;
-  }
-
-  .single-col {
-    max-width: 620px;
-    margin: 0 auto 2.5rem;
-  }
-
   @media (max-width: 640px) {
     .page {
       padding: 1.5rem 1.25rem 4rem;
@@ -247,98 +230,90 @@
 </style>
 </head>
 <body>
-<div class="noise"></div>
-<main class="page">
+  <div class="noise"></div>
+  <main class="page">
+    <div class="masthead">
+      <span class="masthead-left">Open Source · Ethics · Common Decency</span>
+      <span class="masthead-right">Free to copy, free to use</span>
+    </div>
 
-  <div class="masthead">
-    <span class="masthead-left">Open Source · Ethics · Common Decency</span>
-    <span class="masthead-right">Version 1.1 &nbsp;·&nbsp; Free to copy, free to use</span>
-  </div>
+    <div class="headline-wrap">
+      <span class="kicker">A software license for reasonable human beings</span>
+      <h1>Don't Be<br><em>A Dick</em></h1>
+      <div class="version-tag">DBAD License · v1.2</div>
+    </div>
 
-  <div class="headline-wrap">
-    <span class="kicker">A software license for reasonable human beings</span>
-    <h1>Don't Be<br><em>A Dick</em></h1>
-    <div class="version-tag">DBAD License · v1.1</div>
-  </div>
-
-  <div class="single-col">
-    <p class="dropcap">
-      Do whatever you want with this code.
-      Modify it, distribute it, build on top of it — for personal or commercial projects.
-      Make it into something completely different. Never mention the original author. All of that is fine.
-    </p>
-    <p>
-      What you cannot do is use it to cause harm.
-      Harm to a person, a group, a company, a community, a government, animals, insects, or even the planet.<br><br>
-      <strong>This code, or part of it, must not be used as a weapon.</strong>
-    </p>
-  </div>
-
-  <div class="pullquote-wrap">
-    <p class="pullquote">
-      "If you're wondering whether<br>what you're doing is okay —<br>it probably isn't."
-    </p>
-  </div>
-
-  <div class="columns">
-    <div class="section">
-      <span class="section-label">What's allowed</span>
-      <h2>Use it. Break it. Build something new.</h2>
-      <p>
-        The code is yours to use, fork, remix, and integrate.
-        Personal projects, commercial products, open source derivatives — all welcome.
+    <div class="single-col">
+      <p class="dropcap">
+        Do whatever you want with this code.
+        Modify it, distribute it, build on top of it — for personal or commercial projects.
+        Make it into something completely different. Never mention the original author. All of that is fine.
       </p>
       <p>
-        Using it as a building block for something of your own is exactly what it's here for.
+        What you cannot do is cause harm with it.
+        Harm to a being, a group, a company, a community, a government, or even the planet as a whole.
       </p>
     </div>
 
-    <div class="col-divider"></div>
-
-    <div class="section">
-      <span class="section-label">What isn't</span>
-      <h2>Don't sell the box. Don't point it at people.</h2>
-      <p>
-        Wrapping it in a box and calling it a product is being a dick.
-        If your business model is reselling this code unchanged, find another model.
-      </p>
-      <p>
-        Harm is harm — whether it targets a single person, a small being or a corporation.
-        That's where this license draws its only real line.
+    <div class="pullquote-wrap">
+      <p class="pullquote">
+        "If you're wondering whether<br>what you're doing is okay —<br>it probably isn't."
       </p>
     </div>
 
-    <div class="col-divider"></div>
+    <div class="columns">
+      <div class="section">
+        <span class="section-label">What's allowed</span>
+        <h2>Use it. Break it. Build something new.</h2>
+        <p>
+          The code is yours to use, fork, remix, and integrate.
+          Personal projects, commercial products, open source derivatives — all welcome.
+        </p>
+        <p>
+          Using it as a building block for something of your own is exactly what it's here for.
+        </p>
+      </div>
 
-    <div class="section">
-      <span class="section-label">Legal standing</span>
-      <h2>None. And that's the point.</h2>
-      <p>
-        This license will never hold up in court.
-        It's not meant to.
-        The real judge is public opinion, and on the internet, things move fast.
-      </p>
-      <p>
-        This is a moral contract, not a legal one.
-        It says something about who you are when you use it.
-      </p>
+      <div class="col-divider"></div>
+
+      <div class="section">
+        <span class="section-label">What isn't</span>
+        <h2>Don't sell the box. Don't point it at people.</h2>
+        <p>
+          Wrapping the code in a box and calling it a product is being a dick.
+        </p>
+        <p>
+          Using the code to integrate malware, or to mine coins to the detriment of others,
+          is also being a dick.
+        </p>
+        <p>
+          Simple, isn't it?
+        </p>
+      </div>
+
+      <div class="col-divider"></div>
+
+      <div class="section">
+        <span class="section-label">Legal standing</span>
+        <h2>None. And that's the point.</h2>
+        <p>
+          This license will never hold up in court.
+          It's not meant to.
+        </p>
+        <p>
+          This is a moral contract, not a legal one.
+          It says something about who you are when you use it.
+        </p>
+        <p>
+          The real judge is public opinion, and on the internet, words spread fast.
+        </p>
+      </div>
     </div>
-  </div>
 
-  <div class="bottom-line-wrap">
-    <span class="section-label">Bottom line</span>
-    <h2>Common sense and basic decency are enough.</h2>
-    <p>
-      This license doesn't need fine print.
-      The name says it all.
-      If you have to ask, you already know the answer.
-    </p>
-  </div>
-
-  <footer class="footer">
-    <p>Don't Be A Dick License (DBAD) · v1.1</p>
-    <p>No rights reserved · Copy freely · Be decent</p>
-  </footer>
-</main>
+    <footer class="footer">
+      <p>Don't Be A Dick License (DBAD) · v1.2</p>
+      <p>No rights reserved · Copy freely · Be decent</p>
+    </footer>
+  </main>
 </body>
 </html>
