@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Don't Be A Dick License</title>
+<title>Don't Be A Dick license</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IM+Fell+English:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -29,14 +29,39 @@
     padding: 0;
   }
 
-  .noise {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 100;
-    opacity: 0.025;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    background-size: 200px 200px;
+  h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(3.2rem, 8vw, 6.5rem);
+    font-weight: 900;
+    line-height: 0.92;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 1.2rem;
+  }
+
+  h1 em {
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.8rem;
+    color: var(--ink);
+  }
+
+  p {
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: var(--ink-soft);
+    margin-bottom: 0.8rem;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
   }
 
   .page {
@@ -71,7 +96,7 @@
     letter-spacing: 0.05em;
   }
 
-  .headline-wrap {
+  .headline {
     text-align: center;
     padding: 4rem 1rem;
     border-bottom: 1px solid var(--ink);
@@ -89,21 +114,6 @@
     display: block;
   }
 
-  h1 {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(3.2rem, 8vw, 6.5rem);
-    font-weight: 900;
-    line-height: 0.92;
-    letter-spacing: -0.02em;
-    color: var(--ink);
-    margin-bottom: 1.2rem;
-  }
-
-  h1 em {
-    font-style: italic;
-    font-weight: 400;
-  }
-
   .version-tag {
     display: inline-block;
     font-family: 'Libre Baskerville', serif;
@@ -116,25 +126,49 @@
     margin-top: 0.5rem;
   }
 
-  .single-col {
+  .presentation {
     max-width: 620px;
     margin: 0 auto 4rem;
   }
 
-  .pullquote-wrap {
+  .dropcap::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.8rem;
+    font-weight: 900;
+    float: left;
+    line-height: 0.8;
+    margin: 0.05em 0.08em 0 0;
+    color: var(--ink);
+  }
+
+  .statement {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .quote {
     padding: 0 2rem;
     margin-bottom: 6rem;
     text-align: center;
-    position: relative;
   }
 
-  .pullquote {
+  .quote p {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: clamp(1.3rem, 3vw, 2rem);
     font-style: italic;
     font-weight: 400;
     line-height: 1.3;
     color: var(--ink);
+  }
+
+  .quote.black-variant {
+    background: var(--ink);
+    padding: 2rem 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .quote.black-variant p {
+    color: var(--paper);
   }
 
   .columns {
@@ -155,7 +189,7 @@
 
   .section-label {
     font-family: 'IM Fell English', serif;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--ink-muted);
@@ -163,34 +197,39 @@
     margin-bottom: 0.4rem;
   }
 
-  h2 {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 1.25rem;
+  .changelog {
+    margin-bottom: 3rem;
+  }
+
+  .changelog-list {
+    margin-top: 0.6rem;
+  }
+
+  .changelog-entry {
+    display: flex;
+    gap: 1.5rem;
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .changelog-entry:last-child {
+    border-bottom: none;
+  }
+
+  .changelog-entry dt {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.75rem;
     font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 0.8rem;
+    letter-spacing: 0.08em;
     color: var(--ink);
+    min-width: 3rem;
+    padding-top: 0.05rem;
   }
 
-  p {
-    font-size: 0.9rem;
-    line-height: 1.75;
+  .changelog-entry dd {
+    font-size: 0.85rem;
     color: var(--ink-soft);
-    margin-bottom: 0.8rem;
-  }
-
-  p:last-child {
-    margin-bottom: 0;
-  }
-
-  .dropcap::first-letter {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.8rem;
-    font-weight: 900;
-    float: left;
-    line-height: 0.8;
-    margin: 0.05em 0.08em 0 0;
-    color: var(--ink);
+    line-height: 1.6;
   }
 
   .footer {
@@ -230,33 +269,33 @@
 </style>
 </head>
 <body>
-  <div class="noise"></div>
   <main class="page">
     <div class="masthead">
-      <span class="masthead-left">Open Source · Ethics · Common Decency</span>
+      <span class="masthead-left">Ethics &amp; Common Decency</span>
       <span class="masthead-right">Free to copy, free to use</span>
     </div>
 
-    <div class="headline-wrap">
-      <span class="kicker">A software license for reasonable human beings</span>
+    <div class="headline">
+      <span class="kicker">A license for reasonable human beings</span>
       <h1>Don't Be<br><em>A Dick</em></h1>
-      <div class="version-tag">DBAD License · v1.2</div>
+      <div class="version-tag">DBAD License · V1.3</div>
     </div>
 
-    <div class="single-col">
+    <div class="presentation">
       <p class="dropcap">
-        Do whatever you want with this code.
+        Do whatever you want with this product.
         Modify it, distribute it, build on top of it — for personal or commercial projects.
-        Make it into something completely different. Never mention the original author. All of that is fine.
+        Make it into something completely different.
+        Never mention the original author.
+        All of that is fine.
       </p>
-      <p>
-        What you cannot do is cause harm with it.
-        Harm to a being, a group, a company, a community, a government, or even the planet as a whole.
+      <p class="statement">
+        <strong>What you cannot do is cause harm with it.</strong>
       </p>
     </div>
 
-    <div class="pullquote-wrap">
-      <p class="pullquote">
+    <div class="quote">
+      <p>
         "If you're wondering whether<br>what you're doing is okay —<br>it probably isn't."
       </p>
     </div>
@@ -264,13 +303,13 @@
     <div class="columns">
       <div class="section">
         <span class="section-label">What's allowed</span>
-        <h2>Use it. Break it. Build something new.</h2>
+        <h2>Use it. Break it.<br>Build something new.</h2>
         <p>
-          The code is yours to use, fork, remix, and integrate.
-          Personal projects, commercial products, open source derivatives — all welcome.
+          This work is yours to use, adapt, remix, and build upon.
+          Personal projects, commercial products, derivative works — all welcome.
         </p>
         <p>
-          Using it as a building block for something of your own is exactly what it's here for.
+          Using it as a building block for something of your own is exactly what it's meant for.
         </p>
       </div>
 
@@ -278,13 +317,12 @@
 
       <div class="section">
         <span class="section-label">What isn't</span>
-        <h2>Don't sell the box. Don't point it at people.</h2>
+        <h2>Don't claim it.<br>Don't aim it.</h2>
         <p>
-          Wrapping the code in a box and calling it a product is being a dick.
+          Passing this off as your own creation is being a dick.
         </p>
         <p>
-          Using the code to integrate malware, or to mine coins to the detriment of others,
-          is also being a dick.
+          Using it to harm, deceive, humiliate, or exploit others is also being a dick.
         </p>
         <p>
           Simple, isn't it?
@@ -295,7 +333,7 @@
 
       <div class="section">
         <span class="section-label">Legal standing</span>
-        <h2>None. And that's the point.</h2>
+        <h2>None.<br>And that's the point.</h2>
         <p>
           This license will never hold up in court.
           It's not meant to.
@@ -310,8 +348,36 @@
       </div>
     </div>
 
+    <div class="quote black-variant">
+      <p>
+        This license shouldn't exist.<br>It's all common sense.
+      </p>
+    </div>
+
+    <div class="changelog">
+      <span class="section-label">Version history</span>
+      <dl class="changelog-list">
+        <div class="changelog-entry">
+          <dt>V1.3</dt>
+          <dd>Make the license less specific, more global.</dd>
+        </div>
+        <div class="changelog-entry">
+          <dt>V1.2</dt>
+          <dd>Improve several formulations.</dd>
+        </div>
+        <div class="changelog-entry">
+          <dt>V1.1</dt>
+          <dd>Make the license vegan.</dd>
+        </div>
+        <div class="changelog-entry">
+          <dt>V1.0</dt>
+          <dd>First version.</dd>
+        </div>
+      </dl>
+    </div>
+
     <footer class="footer">
-      <p>Don't Be A Dick License (DBAD) · v1.2</p>
+      <p>Don't Be A Dick License (DBAD) · V1.3</p>
       <p>No rights reserved · Copy freely · Be decent</p>
     </footer>
   </main>
